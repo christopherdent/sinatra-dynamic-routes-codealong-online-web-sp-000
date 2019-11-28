@@ -22,11 +22,8 @@ class App < Sinatra::Base
   
   
   get '/multiply/:num1/:num2' do
-    @product = all_the_medicines.select do |medicine|
-      
-      medicine.id == params[:id]
-    end.first
-    erb :'/medicines/show.html'
+    @product = params[:num1] * params[:num2]
+    p @product 
   end
   
 
